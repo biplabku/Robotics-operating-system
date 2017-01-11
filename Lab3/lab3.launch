@@ -1,0 +1,7 @@
+<launch>
+<node name = "rviz" pkg="rviz" type="rviz"
+                args="-d $(find lab3)/rviz/t1.rviz" />
+<node name="rosbag_read" pkg="lab3" type="rosbag_read.py" 
+                args="$(find lab3)/scripts/grid.bag" />
+	
+</launch>
