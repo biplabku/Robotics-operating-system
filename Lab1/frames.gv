@@ -1,0 +1,14 @@
+digraph G {
+"robot_0/base_link" -> "robot_0/base_laser_link"[label="Broadcaster: /stage\nAverage rate: 10.208 Hz\nMost recent transform: 57.800 ( 0.000 sec old)\nBuffer length: 4.800 sec\n"];
+"robot_0/base_footprint" -> "robot_0/base_link"[label="Broadcaster: /stage\nAverage rate: 10.208 Hz\nMost recent transform: 57.800 ( 0.000 sec old)\nBuffer length: 4.800 sec\n"];
+"robot_0/odom" -> "robot_0/base_footprint"[label="Broadcaster: /stage\nAverage rate: 10.208 Hz\nMost recent transform: 57.800 ( 0.000 sec old)\nBuffer length: 4.800 sec\n"];
+"World1" -> "robot_0/odom"[label="Broadcaster: /evader_tf_broadcaster\nAverage rate: 10.213 Hz\nMost recent transform: 57.800 ( 0.000 sec old)\nBuffer length: 4.700 sec\n"];
+"robot_1/base_link" -> "robot_1/base_laser_link"[label="Broadcaster: /stage\nAverage rate: 10.208 Hz\nMost recent transform: 57.800 ( 0.000 sec old)\nBuffer length: 4.800 sec\n"];
+"robot_1/base_footprint" -> "robot_1/base_link"[label="Broadcaster: /stage\nAverage rate: 10.208 Hz\nMost recent transform: 57.800 ( 0.000 sec old)\nBuffer length: 4.800 sec\n"];
+"robot_1/odom" -> "robot_1/base_footprint"[label="Broadcaster: /stage\nAverage rate: 10.208 Hz\nMost recent transform: 57.800 ( 0.000 sec old)\nBuffer length: 4.800 sec\n"];
+"World1" -> "robot_1/odom"[label="Broadcaster: /evader_tf_broadcaster\nAverage rate: 10.213 Hz\nMost recent transform: 57.800 ( 0.000 sec old)\nBuffer length: 4.700 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 57.800"[ shape=plaintext ] ;
+ }->"World1";
+}
