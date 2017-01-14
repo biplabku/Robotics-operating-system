@@ -1,0 +1,12 @@
+<launch>
+    <node name="stage" pkg="stage_ros" type="stageros"
+	      args="$(find lab1)/world/playground.world" />
+
+    <node name="evader_tf_broadcaster" pkg="lab1" type="evader_move.py">
+      <param name="robot" type="string" value="robot1" />
+    </node>
+    <node name="pursuer_tf_broadcaster" pkg="lab1" type="pursuer_tf_broadcaster.py" respawn="false" output="screen" >
+      <param name="robot" type="string" value="robot2" /> 
+    </node>
+
+  </launch>

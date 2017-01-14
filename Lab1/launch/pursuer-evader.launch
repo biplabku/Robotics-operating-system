@@ -1,0 +1,10 @@
+<launch>
+    <node name="stage" pkg="stage_ros" type="stageros"
+	      args="$(find lab1)/world/World1.world" />
+
+    <node name="evader_tf_broadcaster" pkg="lab1" type="evader_tf_broadcaster.py">
+    </node>
+    
+    <node name="pursuer_tf_listener" pkg="lab1" type="pursuer_tf_listener.py">
+    </node>
+  </launch>
